@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1605886297 source:c:\users\marin\desktop\cours\fd 2\algo\exercices\demineur\demineur\methodes.c
+	"define.h"
+
+1605886463 c:\users\marin\desktop\cours\fd 2\algo\exercices\demineur\demineur\define.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+
+1605886017 source:c:\users\marin\desktop\cours\fd 2\algo\exercices\demineur\demineur\main.c
+	"define.h"
+

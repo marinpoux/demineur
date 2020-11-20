@@ -1,0 +1,73 @@
+#include "define.h"
+
+///////////////////////////////////////initialisation
+
+//extern void init(){}
+
+extern void init_Tab(int tabInit[DIMENSIONS][DIMENSIONS]){
+    int xTab=0, yTab=0;
+
+    for (yTab=0; yTab<DIMENSIONS; yTab++){
+        for (xTab=0; xTab<DIMENSIONS; xTab++){
+
+            tabInit[yTab][xTab] = -1;
+        }
+    }
+}
+
+///////////////////////////////////////introduction
+
+extern void intro(int *xColonne, int *yLigne){
+
+    printf("Un tableau de 9x9 cellules contient un total de 10 mines.\n");
+    printf("Essayer de devoiler toutes les cases sures, en evitant les mines !\n");
+    printf("Pour commencer, choisissez les coordonner de la premiere case a devoiler\nNe vous inquitez pas, ce ne sera pas une mine !\n");
+
+    lecture(&xColonne, &yLigne);
+
+    printf("colonne : %d, ligne : %d", xColonne, yLigne);
+}
+
+extern void generMines(int *xColonne, int *yLigne){
+
+
+}
+
+///////////////////////////////////////methodes reutilisables
+
+extern void lecture(int *xColonne, int *yLigne){
+    char repereColonne[]="Colonne";
+    char repereLigne[]="Ligne";
+
+    *xColonne = verification(repereColonne) - 1;
+    *yLigne = verification(repereLigne) - 1;
+}
+
+extern int verification(char repere[]){
+    int coordTemp=0;
+
+    fflush(stdin);
+    printf("%s : ", repere); scanf("%d", &coordTemp);
+
+    while ((coordTemp<1) || (coordTemp>9)) {
+
+        printf("Veuillez saisir une valeur comprise entre 1 et 9 !\n");
+
+        fflush(stdin);
+        printf("%s : ", repere); scanf("%d", &coordTemp);
+    }
+
+    return coordTemp;
+}
+
+///////////////////////////////////////
+
+
+
+extern void victoire(int casesVide){
+
+    if (casesVide == (DIMENSIONS*2 - NBMINES)){
+
+        printf("Bravo, vous avez demine le plateau !");
+    }
+}

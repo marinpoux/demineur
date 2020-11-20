@@ -1,0 +1,7 @@
+#gitignore demineur
+
+#/demineur/bin/Debug/demineur.exe
+#/demineur/ogb/Debug/main.o
+
+*.exe
+*.o
