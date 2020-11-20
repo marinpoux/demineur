@@ -53,7 +53,7 @@ extern void generMines(int tabMines[DIMENSIONS][DIMENSIONS]){
             tabMines[yRand][xRand] = 1;
             resteMine--;
 
-            printf("%d,%d - \n", xRand+1, yRand+1);
+            //printf("%d,%d - \n", xRand+1, yRand+1);
         }
     }
 }
