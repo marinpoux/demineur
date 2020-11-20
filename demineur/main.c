@@ -34,13 +34,15 @@ int main()
     //  --> lecture humaine : colonne-ligne (x-y)
     //  --> lecture de l'ordi : ligne-colonne (y-x)
 
-    int tabMines[DIMENSIONS][DIMENSIONS];
+    int tabMines[DIMENSIONS][DIMENSIONS];       //contient les mines
+    char tabAffiche[DIMENSIONS][DIMENSIONS];    //tableau affiché au joueur
 
 
     //initialisation
 
     init(&casesDispo, &casesVides, &perdu);
-    init_Tab(tabMines);
+    init_Tab(tabMines, -1);
+    init_Tab(tabMines, ' ');
 
 
     //introduction

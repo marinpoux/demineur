@@ -11,13 +11,13 @@ extern void init(int *casesDispo, int *casesVides, int *perdu){
     *perdu = 0;
 }
 
-extern void init_Tab(int tabInit[DIMENSIONS][DIMENSIONS]){
+extern void init_Tab(int tabInit[DIMENSIONS][DIMENSIONS], int contenu){
     int xTab=0, yTab=0;
 
     for (yTab=0; yTab<DIMENSIONS; yTab++){
         for (xTab=0; xTab<DIMENSIONS; xTab++){
 
-            tabInit[yTab][xTab] = -1;
+            tabInit[yTab][xTab] = contenu;
         }
     }
 }
